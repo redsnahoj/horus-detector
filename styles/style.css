@@ -1,18 +1,3 @@
-body {
-  color: #fff;
-  background-color: #191919ff;
-  width: 300px;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
 .warning {
   margin: 5px;
   cursor: default;
@@ -52,34 +37,17 @@ body {
   &:hover {
       .popover {
         display: block;
-        -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
-        -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
-        -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
+        animation: fade-in .3s linear 1, move-up .3s linear 1;
       }
     }
 }
 
-@-webkit-keyframes fade-in {
+keyframes fade-in {
 	from   { opacity: 0; }
 	to { opacity: 1; }
 }
-@-moz-keyframes fade-in {
-	from   { opacity: 0; }
-	to { opacity: 1; }
-}
-@-ms-keyframes fade-in {
-	from   { opacity: 0; }
-	to { opacity: 1; }
-}
-@-webkit-keyframes move-up {
-	from   { bottom: 30px; }
-	to { bottom: 42px; }
-}
-@-moz-keyframes move-up {
-	from   { bottom: 30px; }
-	to { bottom: 42px; }
-}
-@-ms-keyframes move-up {
+
+keyframes move-up {
 	from   { bottom: 30px; }
 	to { bottom: 42px; }
 }
