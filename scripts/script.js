@@ -1,3 +1,6 @@
+// List of domains that can be used for phishing
+const domain = ['.zip','.mov', '.py', 'md', '.pub', '.ps', 'ai'];
+
 // Icon exclamation triangle
 const warning = 
   `<span class="warning"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
@@ -13,10 +16,10 @@ function processLinks() {
   // We obtain all the links
   let allLinks = document.links;
 
-  // Iterate over the links to select those containing ".zip" and "@".
+  // Iterate over the links to select those containing some of the domains in the list and "@"
   for(let i=0; i<allLinks.length; i++) {
     let link = allLinks[i].href;
-    if(link.includes(".zip") && link.includes("@")) {
+    if(domain.some((element) => link.includes(element)) && link.includes("@")) {
       
       allLinks[i].href = "javascript:void(0)"; // Disable links
       allLinks[i].style.pointerEvents = "none"; // Disables clicks
