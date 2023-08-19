@@ -1,5 +1,8 @@
 // List of domains that can be used for phishing
-const domain = ['.zip','.mov', '.py', 'md', '.pub', '.ps', 'ai'];
+const domain = [
+  '.zip','.mov', '.py', 'md', '.pub', '.ps', '.ai', '.pw', '.pro', '.tv', '.cx',
+  '.mx', '.fm', '.cc', '.world', '.vip', '.fun', '.biz'
+];
 
 // Icon exclamation triangle
 const warning = 
